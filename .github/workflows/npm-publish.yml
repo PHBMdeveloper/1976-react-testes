@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm install
+      - run: npm ci
 
   npm-build:
     needs: npm-install
@@ -24,6 +24,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
+      - run: npm install
       - run: npm build
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
@@ -37,6 +38,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
+      - run: npm install
       - run: npm test
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
