@@ -11,10 +11,10 @@
     ],
     "coverageThreshold": {
       "global": {
-        "branches": 5,
-        "functions": 20,
-        "lines": 30,
-        "statements": 30
+        "branches": 7.69,
+        "functions": 24.32,
+        "lines": 31.52,
+        "statements": 31.31
       }
     },
     "coverageReporters": ["html", "text"]
