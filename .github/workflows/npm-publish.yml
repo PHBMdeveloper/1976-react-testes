@@ -1,12 +1,12 @@
 # This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
 # For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
 
-name: npm-publish
+name: yarn-publish
 
 on: [push]
 
 jobs:
-  npm-install:
+  yarn-install:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,8 +15,8 @@ jobs:
           node-version: 12
       - run: yarn install
 
-  npm-build:
-    needs: npm-install
+  yarn-build:
+    needs: yarn-install
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -30,7 +30,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
   npm-test:
-    needs: npm-build
+    needs: yarn-build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
