@@ -1,5 +1,5 @@
 {
-  "name": "al-react-test",
+  "name": "all-react-test",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -9,10 +9,10 @@
     "axios": "^0.21.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.4"
+    "react-scripts": "^4.0.1"
   },
   "scripts": {
-    "start": "BROWSER=none react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
