@@ -17,7 +17,7 @@
         "statements": 100
       }
     },
-    "coverageReporters": ["text"]
+    "coverageReporters": ["html", "text"]
   },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
