@@ -6,18 +6,17 @@ name: npm-publish
 on: [push]
 
 jobs:
-  build:
+  npm-install:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm ci
-      - run: npm test
+      - run: npm install
 
-  publish-npm:
-    needs: build
+  npm-build:
+    needs: npm-install
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -25,21 +24,21 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - run: npm publish
+      - run: npm build
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
-  publish-gpr:
-    needs: build
+  npm-test:
+    needs: npm-install
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: https://npm.pkg.github.com/
-      - run: npm ci
-      - run: npm publish
+          registry-url: https://registry.npmjs.org/
+      - run: npm test
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+
+
