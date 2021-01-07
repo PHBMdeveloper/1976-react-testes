@@ -4,7 +4,6 @@
   "license": "UNLICENSED",
   "private": false,
   "jest": {
-    "verbose": true,
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
       "!<rootDir>/node_modules/",
@@ -18,8 +17,7 @@
         "statements": 90
       }
     },
-    "coverageReporters": ["text"],
-    "snapshotSerializers": ["my-serializer-module"]
+    "coverageReporters": ["text"]
   },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
