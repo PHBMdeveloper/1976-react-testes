@@ -1,5 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Maintainability](https://api.codeclimate.com/v1/badges/0c2cfbb7dd1d8b1f960a/maintainability)](https://codeclimate.com/github/PHBMdeveloper/1976-react-testes/maintainability)
 
+[![Test Coverage](https://api.codeclimate.com/v1/badges/0c2cfbb7dd1d8b1f960a/test_coverage)](https://codeclimate.com/github/PHBMdeveloper/1976-react-testes/test_coverage)
 ## Available Scripts
 
 In the project directory, you can run:
