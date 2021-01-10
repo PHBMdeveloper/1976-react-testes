@@ -9,17 +9,14 @@ jobs:
   yarn-install:
     runs-on: ubuntu-latest
     steps:
-      - name: Passos iniciais...
-      - run: actions/checkout@v2
-      - run: actions/setup-node@v1
-        with:
-          node-version: 12
       - name: Instalando o projeto...
       - run: yarn install
       - name: Rodando os testes unitário...
       - run: yarn test -- --coverage
       - name: Construindo para produção...
       - run: CI=false yarn run build
+        with:
+          node-version: 12
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
           CC_TEST_REPORTER_ID: 3393116434a893bd6348076be91db99c3a09c18a73806892371bfcd1bc800e34
