@@ -29,8 +29,8 @@ const atualizaTransacoes = (dados) => conecta(TRANSACOES_URI, {
   headers: {'Content-Type': 'application/json;charset=utf-8'},
   body: JSON.stringify(dados),
 });
-
-export default {
+// eslint-disable-next-line
+export default { 
   listaTransacoes,
   buscaSaldo,
   atualizaSaldo,
